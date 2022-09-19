@@ -14,12 +14,17 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.17" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.17" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.17" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\BooksMartV5.DataAccess\BooksMartV5.DataAccess.csproj" />
     <ProjectReference Include="..\BooksMartV5.Models\BooksMartV5.Models.csproj" />
     <ProjectReference Include="..\BooksMartV5.Utility\BooksMartV5.Utility.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Controllers\" />
   </ItemGroup>
 
 </Project>
