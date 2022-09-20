@@ -1,5 +1,7 @@
 
 using BooksMartV5.DataAccess.Data;
+using BooksMartV5.DataAccess.Repository;
+using BooksMartV5.DataAccess.Repository.IRepository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -35,7 +37,10 @@ namespace BooksMartV5
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddControllersWithViews();
+            /*services.AddControllersWithViews().AddRazorRuntimeCompilation();
+            services.AddRazorPages();*/ //The two services are needed for (.net 3.1)
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
