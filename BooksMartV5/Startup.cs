@@ -39,8 +39,8 @@ namespace BooksMartV5
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddControllersWithViews();
-            /*services.AddControllersWithViews().AddRazorRuntimeCompilation();
-            services.AddRazorPages();*/ //The two services are needed for (.net 3.1)
+            services.AddControllersWithViews().AddRazorRuntimeCompilation(); //The service needed for (.net 3.1)
+            services.AddRazorPages(); //The service needed for (.net 3.1)
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
